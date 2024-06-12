@@ -10,7 +10,7 @@ lista_produtos = [
 
 @app.route("/")
 def home():
-    return "<h1>Home</h1>"
+    return render_template('base.html')
 
 @app.route("/contato")
 def contato():
