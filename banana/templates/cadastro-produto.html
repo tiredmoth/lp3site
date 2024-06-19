@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css') }}">
+    <title>{%block title %} {% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href= "/produtos">Produtos</a>
+    </nav>
+    {% block content %}
+    <h1> Cadastro de produto</h1>
+    <form action ="/produtos" method="POST"> <br>
+        <label for="nome">Nome</label> <br>
+        <input type ="text" name="nome" id="nome"> <br>
+        <label for="descricao" id="descricao"> Descricao</label> <br>
+        <textarea name="descricao" id="descricao" cols = "5" rows="10"></textarea>
+        <label for="preco" id="preco"> Preco</label> <br>
+        <textarea name="preco" id="preco" cols = "5" rows="5"></textarea><br>
+        <input type="file" name="imagem" accept="image/*">
+        <button type="submit">Vai</button>
+
+    </form>
+    {% endblock %}
+
+</body>
+</html>
