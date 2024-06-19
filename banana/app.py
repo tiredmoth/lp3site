@@ -34,8 +34,10 @@ def cadastro_produto():
 
 @app.route("/produtos", methods=['POST'])
 def salvar_produto():
-    nome = request .form['nome']
+    nome = request.form['nome']
     descricao = request.form['descricao']
+    preco = request.form['preco']
+    imagem = request.form['imagem']
     produto = {"nome": nome, "descricao": descricao, "preco": preco, "imagem": imagem}
     lista_produtos.append(produto)
     return redirect(url_for("produtos"))
