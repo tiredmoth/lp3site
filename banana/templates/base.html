@@ -8,10 +8,13 @@
     <title>{%block title %} {% endblock %}</title>
 </head>
 <body>
+    {% block nav %}
     <nav>
         <a href="/">Home</a>
         <a href= "/produtos">Produtos</a>
+        <a href= "/produtos/cadastro">Cadastro de produtos</a>
     </nav>
+    {% endblock %}
     {% block content %}
     {% endblock %}
 

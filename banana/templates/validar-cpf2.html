@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+    <title>{%block title %} {% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href= "/validar_cpf2">Validar CPF</a>
+    </nav>
+    {% block content %}
+    <h1> Validar CPF</h1>
+    {% if cpf.validate(cpf)= True %}
+    <h2>cpf válido</h2>
+    {%end if%}
+    {% if cpf.validate(cpf)= False %}
+    <h2>cpf inválido</h2>
+    {% end if %}
+    </form>
+
+    {% endblock %}
+
+</body>
+</html>

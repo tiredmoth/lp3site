@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+    <title>{%block title %} {% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href= "/validarcpf">Validar CPF</a>
+    </nav>
+    {% block content %}
+    <h1> Validar CPF</h1>
+    <form action ="/validarcpf" method="POST"> <br>
+        <label for="cpf">CPF</label> <br>
+        <input type ="text" name="cpf" id="cpf"> <br>
+        <button type="submit">Validar</button>
+
+    </form>
+    {% endblock %}
+
+</body>
+</html>
