@@ -1,7 +1,12 @@
 
 {% extends "base.html"%}
 {% block title %} produtos {% endblock %}
+{% block nav %}
+    <nav>
+        <a href="/">Voltar</a>
 
+    </nav>
+    {% endblock %}
     {% block content %}
       {% for produto in produtos %}
         <h2>{{ produto.nome}}</h2>

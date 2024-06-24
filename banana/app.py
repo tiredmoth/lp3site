@@ -62,8 +62,31 @@ def validar_cpf():
 
 @app.route("/validarcpf", methods=['POST'])
 def validar_cpf2():
-    return render_template("validar-cpf2.html")
+    cpf = CPF()
+    cpf_user = request.form['cpf']
+    if cpf.validate(cpf_user):
+        resultado = "Cpf válido"
+    else:
+        resultado = "Cpf inválido"
+
+    return render_template("validar-cpf2.html", resultado=resultado, cpf_teste = cpf_user)
+
+@app.route("/validarcnpj")
+def validar_cnpj():
+    return render_template("validar-cnpj.html")
+
+@app.route("/validarcnpj", methods=['POST'])
+def validar_cnpj2():
+    cnpj = CNPJ()
+    cnpj_user = request.form['cnpj']
+    if cnpj.validate(cnpj_user):
+        resultado = "Cnpj válido"
+    else:
+        resultado = "Cnpj inválido"
+
+    return render_template("validar-cnpj2.html", resultado=resultado, cnpj_teste = cnpj_user)
 
 
 
-app.run(port=5001)
+if __name__ == "__main__":
+    app.run(debug=True, port=8001)

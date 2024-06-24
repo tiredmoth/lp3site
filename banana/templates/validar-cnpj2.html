@@ -5,17 +5,16 @@
 
     </nav>
     {% endblock %}
-    
     <title>{%block title %} {% endblock %}</title>
 </head>
 <body>
     <nav>
         <a href="/">Home</a>
-        <a href= "/validar_cpf2">Validar CPF</a>
+        <a href= "/validar_cnpj2">Validar CNPJ</a>
     </nav>
     {% block content %}
-    <h1> Validar CPF</h1>
-    <h1>CPF: {{cpf_teste}}
+    <h1> Validar CNPJ</h1>
+    <h1>CNPJ: {{cnpj_teste}}
     </h1>
     <h1>{{resultado}}</h1>
     </form>
